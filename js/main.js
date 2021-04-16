@@ -1,21 +1,10 @@
-var $_ = function (selector, node = document) {
-  return node.querySelector(selector);
-};
+const search = document.querySelector('.search')
+const input = document.querySelector('.search-input')
+const btn = document.querySelector('.btn-search')
 
-var $$_ = function (selector, node = document) {
-  return node.querySelectorAll(selector);
-};
-
-var createElement = function (element, elementClass, text) {
-  var newElement = document.createElement(element);
-
-  if (elementClass) {
-    newElement.setAttribute('class', elementClass);
-  };
-  
-  if (text) {
-    newElement.textContent = text;
-  };
-};
+btn.addEventListener('click', () => {
+    search.classList.toggle('active')
+    input.focus()
+})
 
 
